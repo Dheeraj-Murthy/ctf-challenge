@@ -1,0 +1,16 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "80:80"  # Expose frontend on port 80
+    depends_on:
+      - backend  # Wait for the backend to start
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3001:3001"  # Expose backend on port 3001
+    volumes:
+      - ./backend/users.db:/app/users.db  # Mount the SQLite database to persist it
