@@ -1,19 +1,19 @@
 import { useNavigate } from 'react-router-dom';
-import "../App.css"; // Make sure Tailwind and any custom styles are included
-import HiddenImage from "./HiddenImage"; // Import the hidden component (careful, secrets inside...)
+import "../App.css"; // Ensure Tailwind and custom styles are included
+import HiddenImage from "./HiddenImage"; // Import the hidden component
 
 function Home() {
   const navigate = useNavigate();
 
   const handleLoginRedirect = () => {
-    navigate('/login'); // This will redirect to the login page
+    navigate('/login'); // Redirect to login page
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 text-center spooky-bg">
-      {/* Heist Header */}
+    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-black text-gray-100 text-center vault-bg">
+      {/* Vault Heist Header */}
       <div className="max-w-[700px] flex flex-col items-center justify-center">
-        <header className="bg-gray-800 p-6 rounded-lg shadow-[0_0_15px_4px_rgba(255,0,0,0.4)] w-[80%] animate-pulse">
+        <header className="bg-gray-900 p-8 rounded-lg shadow-[0_0_15px_4px_rgba(255,215,0,0.5)] w-[80%] animate-fade-in">
           <h1 className="text-5xl font-extrabold text-yellow-500 underline vault-text">
             The Vault Heist
           </h1>
@@ -25,17 +25,17 @@ function Home() {
           </p>
         </header>
 
-        {/* Shadowy Divider for added mystery */}
+        {/* Divider with subtle mystery */}
         <div className="my-8 w-[70%] h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50" />
 
-        {/* Hidden content, but who knows what lies beneath */}
+        {/* Hidden content */}
         <HiddenImage />
 
-        {/* Cryptic Section */}
-        <section className="bg-gray-700 bg-opacity-0 p-4 mt-6 rounded shadow-md w-[75%] text-lg text-gray-200">
-          <p className="italic">Secrets and treasures hidden deep within...</p>
+        {/* Mysterious Section */}
+        <section className="bg-gray-800 p-6 mt-6 rounded-lg shadow-lg w-[75%] text-lg text-gray-200">
+          <p className="italic">The treasure is within reach...</p>
           <p className="mt-2 text-sm text-gray-400">
-            The vault is waiting to be unlocked, but only by the worthy.
+            Find the key, and you&apos;ll unlock the vault.
           </p>
         </section>
 
@@ -47,7 +47,7 @@ function Home() {
           Access the Vault
         </button>
 
-        {/* Cryptic Footer */}
+        {/* Footer */}
         <footer className="mt-8 text-lg font-mono vault-footer">
           <p className="text-gray-400">Can you crack the code and get the treasure?</p>
           <p className="text-sm text-gray-600 italic">Or is the vault impenetrable?</p>

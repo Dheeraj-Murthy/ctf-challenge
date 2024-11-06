@@ -1,3 +1,34 @@
+/* App.css */
+
+/* Custom class for background */
+.vault-bg {
+  background-image: url('/images/vault-bg.jpg');
+  /* Vault or high-tech background image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+/* Footer customization */
+.vault-footer {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* Spooky Background Effects */
 .spooky-bg {
   background-image: url('./assets/bg.jpg');
