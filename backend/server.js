@@ -62,5 +62,5 @@ app.post('/login', (req, res) => {
 // Start the server
 const port = process.env.PORT || 3001;  // Default to 3001 if PORT is not set
 app.listen(port, () => {
-  console.log('Server running on http://localhost:${port}');
+  console.log(`Server running on http://localhost:${port}`);
 });
